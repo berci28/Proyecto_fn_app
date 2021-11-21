@@ -35,45 +35,58 @@ class _MyTablePageState extends State<MyTablePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-        //height: 220,
-        width: double.maxFinite,
         child: ListView.builder(
           itemCount: personas.length,
           itemBuilder: (context, i) => Dismissible(
             key: Key(i.toString()),
-            child: Card(
-                child: Column(
+            child: Column(
               children: [
                 ListTile(
-                  contentPadding: EdgeInsets.fromLTRB(15, 10, 25, 0),
-                  title: Text('Nombre: ' + personas[i].nombre),
-                  subtitle: Text('Correo electrónico: ' + personas[i].correo),
+                  title: Text('Nombre: '),
+                  subtitle: Text('' + personas[i].nombre),
                   leading: Icon(Icons.account_circle),
                 ),
                 ListTile(
-                  contentPadding: EdgeInsets.fromLTRB(15, 10, 25, 0),
-                  title: Text('Habitantes: ' + personas[i].totalHabitantes),
-                  subtitle: Text('Personas vacunadas: ' +
-                      personas[i].numPersonasVacunadas),
-                  leading: Icon(Icons.account_balance_outlined),
+                  title: Text('Correo electrónico:'),
+                  subtitle: Text('' + personas[i].correo),
+                  leading: Icon(Icons.mail),
                 ),
                 ListTile(
-                    contentPadding: EdgeInsets.fromLTRB(15, 10, 25, 0),
-                    title: Text('Dirección: ' + personas[i].direccion),
-                    subtitle:
-                        Text('Código postal: ' + personas[i].codigoPostal),
+                  title: Text('Habitantes: '),
+                  subtitle:
+                      Text('' + personas[i].totalHabitantes + ' personas'),
+                  leading: Icon(Icons.home),
+                ),
+                ListTile(
+                  title: Text('Integrantes vacunadas: '),
+                  subtitle:
+                      Text('' + personas[i].numPersonasVacunadas + ' personas'),
+                  leading: Icon(Icons.home_filled),
+                ),
+                ListTile(
+                    title: Text('Dirección: '),
+                    subtitle: Text('' + personas[i].direccion),
                     leading: Icon(Icons.fmd_good_sharp)),
+                ListTile(
+                    title: Text('Código postal:'),
+                    subtitle: Text('' + personas[i].codigoPostal),
+                    leading: Icon(Icons.fmd_good)),
+                ListTile(
+                  title: Text('Fecha de entrevista: '),
+                  subtitle: Text('' + personas[i].fechaEntrevista),
+                  leading: Icon(Icons.calendar_today),
+                ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     FlatButton(
                         onPressed: () => {},
-                        child: Text(personas[i].fechaEntrevista)),
+                        child: Text(
+                            "------------------------------------------------------------------------------------------")),
                   ],
                 )
               ],
-            )),
+            ),
           ),
         ),
       ),

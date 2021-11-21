@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSpacing: 0,
         children: [
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(40),
             child: FlatButton(
               onPressed: () => {
                 Navigator.push(
@@ -32,9 +32,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) =>
                             const MyFormPage(title: 'Registro')))
               },
-              color: Colors.indigo,
+              color: Colors.black,
               textColor: Colors.white,
-              padding: EdgeInsets.only(top: 60),
+              padding: EdgeInsets.only(top: 50),
               child: Column(
                 children: <Widget>[
                   Icon(Icons.add_chart),
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(40),
             child: FlatButton(
               onPressed: () => {
                 Navigator.push(
@@ -53,9 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) =>
                             const MyTablePage(title: 'Registros')))
               },
-              color: Colors.indigo,
+              color: Colors.black,
               textColor: Colors.white,
-              padding: EdgeInsets.only(top: 60),
+              padding: EdgeInsets.only(top: 50),
               child: Column(
                 children: <Widget>[
                   Icon(Icons.visibility),

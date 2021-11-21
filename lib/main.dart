@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Censo App',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.purple,
       ),
       home: const MyHomePage(title: 'Censo de vacunacion'),
     );
